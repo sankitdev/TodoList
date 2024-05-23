@@ -12,15 +12,19 @@ addButton.addEventListener("click", () => {
   }
 });
 
-function createTaskElement(taskText) {
+function createTaskElement(taskText, isComplete = false) {
   const li = document.createElement("li");
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
+  checkbox.checked = isComplete;
   checkbox.addEventListener("click", () => {
     li.classList.toggle("check");
   });
   li.appendChild(checkbox);
   li.appendChild(document.createTextNode(taskText));
+  if (isComplete) {
+    li.classList.add("check");
+  }
   todoList.appendChild(li);
   ellipsisIcon(li);
 }
@@ -62,6 +66,7 @@ function showMenu(threedot, menu) {
   menu.addEventListener("mouseleave", hide);
 }
 
+export { createTaskElement };
 // todoList.addEventListener("click", (event) => {
 //   if (event.target.nodeName === "LI") {
 //     event.target.remove();

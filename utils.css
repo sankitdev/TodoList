@@ -46,4 +46,5 @@ body {
   color: var(--text-color);
   border-radius: 15px;
   box-shadow: var(--btn-shadow);
+  cursor: pointer;
 }
