@@ -33,17 +33,26 @@ function saveTasks() {
 
 //Function to render Task in UI
 
+function createElement(element) {
+  const li = document.createElement("li");
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = element.completed;
+  li.appendChild(checkbox);
+  const tasktitle = document.createTextNode(element.title);
+  li.appendChild(tasktitle);
+  return li;
+}
 function renderTasks() {
   todoList.innerHTML = "";
   tasks.forEach((task) => {
-    const li = document.createElement("li");
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.checked = task.completed;
-    li.appendChild(checkbox);
-    const tasktitle = document.createTextNode(task.title);
-    li.appendChild(tasktitle);
+    const li = createElement(task);
     todoList.appendChild(li);
+    if (task.completed) {
+      li.classList.add("check");
+    } else {
+      li.classList.remove("check");
+    }
   });
 }
 

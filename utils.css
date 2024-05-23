@@ -40,3 +40,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 15px;
+  box-shadow: var(--btn-shadow);
+}

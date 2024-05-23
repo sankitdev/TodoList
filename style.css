@@ -24,7 +24,7 @@ body {
 }
 
 input {
-  margin-top: 1rem;
+  margin: 0.5rem 0;
   padding: 0.5rem 0.8rem;
   border-radius: 12px;
   border: 0.5px solid var(--primary-color);
@@ -33,32 +33,61 @@ input {
   color: var(--primary-color);
   box-shadow: var(--input-shadow);
 }
-button {
+#addButton {
   padding: 0.8rem 1rem;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border-radius: 15px;
-  box-shadow: var(--btn-shadow);
   font-size: 0.9rem;
   transition: all 0.2s ease-in-out;
 }
 
 ul {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   /* border: 2px solid red; */
   list-style: none;
   flex-direction: column;
 }
 li {
+  position: relative;
   width: 80%;
   border-radius: 12px;
-  height: 3rem;
+  height: 2.4rem;
   background-color: white;
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
   cursor: pointer;
   text-align: left;
   padding-left: 1rem;
+}
+
+.menu {
+  font-family: "Remixicon";
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.actions {
+  position: absolute;
+  top: 60%;
+  right: 1rem;
+  width: 80px;
+  height: 70px;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+}
+.menu-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  width: 90%;
+  margin: 0.2rem;
+}
+
+ul li input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
 }
 
 .check {

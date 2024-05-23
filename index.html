@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="utils.css" />
     <script src="script.js" defer></script>
@@ -13,13 +17,21 @@
     <div class="main morphism">
       <h1>To-Do List</h1>
       <input type="text" id="todoInput" />
-      <button id="addButton">Add Item</button>
+      <button id="addButton" class="btn">Add Item</button>
+      <div class="section-category">
+        <select name="category" id="category">
+          <option value="coding">Coding</option>
+          <option value="daily">Daily Task</option>
+          <option value="grocery">Grocery</option>
+        </select>
+      </div>
       <ul id="todoList" class="flex"></ul>
     </div>
+
     <div>
-      <button id="saveTask">Save Task</button>
-      <button id="loadTask">Load Task</button>
-      <button id="clearTasks">Clear Task</button>
+      <button id="saveTask" class="btn">Save Task</button>
+      <button id="loadTask" class="btn">Load Task</button>
+      <button id="clearTasks" class="btn">Delete Task!!</button>
     </div>
   </body>
 </html>
