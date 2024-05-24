@@ -52,13 +52,14 @@ function saveTasks(tasks) {
 function renderTasks() {
   todoList.innerHTML = "";
   tasks.forEach((task) => {
+    console.log(`This is from render task: ${task.title}`);
     createTaskElement(task.title, task.completed);
   });
 }
 
 function loadTasks() {
   let tasksJSON = localStorage.getItem("tasks");
-  console.log(tasksJSON);
+  // console.log(tasksJSON);
   if (tasksJSON) {
     tasks = JSON.parse(tasksJSON);
   } else {

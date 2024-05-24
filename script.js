@@ -16,7 +16,7 @@ function createTaskElement(taskText, isComplete = false) {
   const li = document.createElement("li");
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
-  checkbox.checked = isComplete;
+  checkbox.checked = isComplete; // by default false
   checkbox.addEventListener("click", () => {
     li.classList.toggle("check");
   });
@@ -50,16 +50,29 @@ function taskMenu(limenu) {
   return menu;
 }
 
+function buttonInteract(menu, limenu) {
+  let editBtn = menu.querySelector(".edit-btn");
+  let deleteBtn = menu.querySelector(".delete-btn");
+  editBtn.addEventListener("click", () => {
+    alert("i am clicked");
+  });
+  deleteBtn.addEventListener("click", () => {
+    limenu.remove();
+  });
+}
 function showMenu(threedot, menu) {
+  let hideTimeout;
   function show() {
+    clearTimeout(hideTimeout);
     menu.style.display = "block";
   }
 
   function hide() {
-    if (!menu.matches(":hover")) {
-      // Only hide if NOT hovering over the menu
-      menu.style.display = "none";
-    }
+    hideTimeout = setTimeout(() => {
+      if (!menu.matches(":hover")) {
+        menu.style.display = "none";
+      }
+    }, 500);
   }
   threedot.addEventListener("mouseover", show);
   threedot.addEventListener("mouseleave", hide);
