@@ -69,10 +69,16 @@ function loadTasks() {
 }
 loadTaskBtn.addEventListener("click", loadTasks);
 
-function clearTasks() {
-  clearTaskBtn.addEventListener("click", () => {
+function promptforDeletion() {
+  const confirmed = confirm("Are you sure you want to delete this item?");
+  if (confirmed) {
     localStorage.clear();
-  });
+    while (todoList.firstChild) {
+      todoList.firstChild.remove();
+    }
+  } else {
+  }
 }
+clearTaskBtn.addEventListener("click", promptforDeletion);
 
-clearTasks();
+// clearTasks();

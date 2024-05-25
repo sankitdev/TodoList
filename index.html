@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
     <title>To-Do List</title>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
@@ -17,7 +18,7 @@
     <div class="main morphism">
       <h1>To-Do List</h1>
       <input type="text" id="todoInput" />
-      <button id="addButton" class="btn">Add Item</button>
+      <button id="addButton" class="btn fluid">Add Item</button>
       <div class="section-category">
         <select name="category" id="category">
           <option value="coding">Coding</option>
@@ -26,11 +27,18 @@
         </select>
       </div>
       <ul id="todoList" class="flex"></ul>
+      <span class="erasor fluid"><i class="ri-eraser-line"></i></span>
     </div>
     <div class="bottom morphism flex">
-      <button id="saveTask" class="btn bottom-btn">Save Task</button>
-      <button id="loadTask" class="btn bottom-btn">Load Task</button>
-      <button id="clearTasks" class="btn bottom-btn">Delete Task!!</button>
+      <button id="saveTask" class="btn bottom-btn fluid">Save Task</button>
+      <button id="loadTask" class="btn bottom-btn fluid">Load Task</button>
+      <button
+        id="clearTasks"
+        class="btn bottom-btn fluid"
+        title="Click this will delete you all data from local Storage"
+      >
+        Delete DB
+      </button>
     </div>
   </body>
 </html>

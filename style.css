@@ -37,8 +37,8 @@ input {
   box-shadow: var(--input-shadow);
 }
 #addButton {
-  padding: 0.6rem 0.8rem;
-  font-size: 1.1rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
 }
 
 ul {
@@ -109,9 +109,25 @@ ul li input[type="checkbox"] {
   width: 400px;
 }
 
+.erasor {
+  position: absolute;
+  bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.erasor:active {
+  transform: translateY(4px);
+}
+
 .bottom-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   margin-left: 0.5rem;
+}
+
+#clearTasks {
+  background-color: rgb(208, 28, 64);
+  color: white;
+  border: none;
 }
 
 @media (max-width: 600px) {

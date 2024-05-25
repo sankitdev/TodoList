@@ -38,3 +38,13 @@ body {
   font-size: 0.95rem;
   font-weight: 600;
 }
+
+.btn:active {
+  background-color: rgb(235, 233, 233); /* Darker shade for click effect */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Example box shadow */
+  transform: translateY(2px);
+}
+
+.fluid {
+  transition: all 0.3s ease;
+}
